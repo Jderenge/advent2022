@@ -2,7 +2,7 @@
 
 from datetime import datetime, timezone, timedelta
 from sys import argv
-import BeautifulSoup
+from bs4 import BeautifulSoup
 import requests
 
 year, day = datetime.now(timezone(timedelta(hours=-5))).year, \
