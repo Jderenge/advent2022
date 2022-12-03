@@ -2,6 +2,7 @@ f = open('input/day03.txt')
 lines = [line.rstrip() for line in f.readlines()]
 
 priority=0
+priority2=0
 for line in lines:
     firsthalf = line[:len(line)//2]
     secondhalf = line[len(line)//2:]
@@ -14,12 +15,27 @@ for line in lines:
             else:
                 priority += ord(character) - ord('a') + 1
             break
+    
+    
+    
+for sex in range(len(lines)):
+    if sex % 3 == 0:
+        for character in lines[sex]:
+            if character in lines[sex+1] and character in lines[sex+2]:
+                if character == character.upper():
+                    priority2 += ord(character) - ord('A') + 26 + 1
+                else:
+                    priority2 += ord(character) - ord('a') + 1
+                break
+
+                
+                
+                
         
-    for character in line[1,2,3]:
         
         
 part1 = priority
-part2 = 0
+part2 = priority2
 
 print(f'part 1: {part1}')
 print(f'part 2: {part2}')
