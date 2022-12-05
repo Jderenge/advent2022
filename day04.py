@@ -15,7 +15,7 @@ for line in lines:
         part1 +=1
     if elf_sex.intersection(elf_cum):
         part2 +=1
-        
+    
         
         
     
