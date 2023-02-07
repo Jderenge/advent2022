@@ -9,11 +9,11 @@ part2 = 0
 for line in lines:
     line = [int(n) for n in re.split(",|-",line)]
     
-    elf_sex = set(range(line[0],line[1]+1)) 
-    elf_cum = set(range(line[2],line[3]+1))
-    if elf_sex.issubset(elf_cum) or elf_cum.issubset(elf_sex):
+    elf = set(range(line[0],line[1]+1)) 
+    elfs = set(range(line[2],line[3]+1))
+    if elf.issubset(elfs) or elfs.issubset(elf):
         part1 +=1
-    if elf_sex.intersection(elf_cum):
+    if elf.intersection(elfs):
         part2 +=1
     
         
