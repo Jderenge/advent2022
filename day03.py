@@ -18,10 +18,10 @@ for line in lines:
     
     
     
-for sex in range(len(lines)):
-    if sex % 3 == 0:
-        for character in lines[sex]:
-            if character in lines[sex+1] and character in lines[sex+2]:
+for set in range(len(lines)):
+    if set % 3 == 0:
+        for character in lines[set]:
+            if character in lines[set+1] and character in lines[set+2]:
                 if character == character.upper():
                     priority2 += ord(character) - ord('A') + 26 + 1
                 else:
