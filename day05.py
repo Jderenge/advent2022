@@ -10,16 +10,16 @@ s7 = ['S', 'B', 'M', 'V', 'L', 'R', 'J']
 s8 = ['J', 'P', 'D']
 s9 = ['V', 'W', 'N', 'C', 'D']
 #for line in lines:
-sex = [s1, s2, s3, s4, s5, s6, s7, s8, s9]
+set = [s1, s2, s3, s4, s5, s6, s7, s8, s9]
 for i in lines:
     instruct1 = i.split(' ')
     instruct1.remove('move'), instruct1.remove('to'), instruct1.remove('from')
     for x in range(int(instruct1[0])):
-        tmp = sex[int(instruct1[1])-1][0]
-        sex[int(instruct1[2])-1].insert(0, tmp)
-        sex[int(instruct1[1])-1].remove(tmp) 
+        tmp = set[int(instruct1[1])-1][0]
+        set[int(instruct1[2])-1].insert(0, tmp)
+        set[int(instruct1[1])-1].remove(tmp) 
 
-#part1 = sex
+#part1 = set
 #for i in range(9):
     #print(part1[i][0]),
 s1 = ['P', 'D', 'Q', 'R', 'V', 'B', 'H', 'F']
@@ -31,15 +31,15 @@ s6 = ['M', 'V', 'G', 'T', 'N', 'P', 'R', 'J']
 s7 = ['S', 'B', 'M', 'V', 'L', 'R', 'J']
 s8 = ['J', 'P', 'D']
 s9 = ['V', 'W', 'N', 'C', 'D']
-sex = [s1, s2, s3, s4, s5, s6, s7, s8, s9]
+set = [s1, s2, s3, s4, s5, s6, s7, s8, s9]
 for i in lines:
     instruct1 = i.split(' ')
     instruct1.remove('move'), instruct1.remove('to'), instruct1.remove('from')
     for x in range(int(instruct1[0])):
-        tmp = sex[int(instruct1[1])-1][0]
-        sex[int(instruct1[2])-1].insert(x, tmp)
-        sex[int(instruct1[1])-1].remove(tmp)
-part2 = sex
+        tmp = set[int(instruct1[1])-1][0]
+        set[int(instruct1[2])-1].insert(x, tmp)
+        set[int(instruct1[1])-1].remove(tmp)
+part2 = set
 
 for i in range(9):
     print(part2[i][0], end='')
